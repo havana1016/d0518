@@ -1,0 +1,27 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+
+
+<mapper namespace="test">
+    <insert id="save" parameterType="String">
+        insert into people(name,age) values (#{name},null)
+    </insert>
+    <insert id="save1" parameterType="tdto">
+        insert into people(name,age) values (#{name},#{age})
+    </insert>
+</mapper>
+
+
+
+
+
+
+
+
+
+
+
+
+
+
