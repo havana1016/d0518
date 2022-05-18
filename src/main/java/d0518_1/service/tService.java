@@ -12,8 +12,15 @@ public class tService {
     public void save(String name,int age){
         tr.save(name,age);
     }
-    public void save2(tDTO tdto){
-        tr.save2(tdto);
+    public boolean save2(tDTO tdto){
+        int result=tr.save2(tdto);
+        boolean bool;
+        if(result>0){
+            bool=true;
+        }else{
+            bool=false;
+        }
+        return bool;
     }
 
 

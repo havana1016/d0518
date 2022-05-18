@@ -33,7 +33,14 @@ public class tController {
     }
 
     @PostMapping("/save2")
-    void save2(@ModelAttribute tDTO tdto){
-        ts.save2(tdto);
+    String save2(@ModelAttribute tDTO tdto){
+        boolean result=ts.save2(tdto);
+        if(result==true){
+            System.out.println("insert 성공");
+            return "index";
+        }else{
+            System.out.println("insert 실패");
+        }
+        return ("index");
     }
 }

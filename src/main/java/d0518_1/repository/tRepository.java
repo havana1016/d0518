@@ -18,8 +18,8 @@ public class tRepository {
         sql.insert("test.save1",dt);
     }
 
-    public void save2(tDTO tdto){
+    public int save2(tDTO tdto){
         //sql.insert("test.save",name);
-        sql.insert("test.save1",tdto);
+        return sql.insert("test.save1",tdto);
     }
 }
